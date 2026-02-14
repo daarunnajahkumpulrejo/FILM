@@ -707,7 +707,7 @@
        <p class="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">Jelajahi koleksi film terbaik kami dengan kualitas HD premium</p>
       </div><!-- Genre Filter -->
       <div class="mb-8 sm:mb-12">
-       <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8"><button id="genre-all" class="genre-btn active px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 bg-gradient-to-r from-amber-500 to-amber-600 text-black shadow-lg hover:shadow-xl" onclick="filterByGenre('all')"> 🎬 Semua Film </button> <button id="genre-drama" class="genre-btn px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 bg-gray-800 text-amber-400 border border-amber-500/30 hover:border-amber-500 hover:bg-gray-700" onclick="filterByGenre('drama')"> 🎭 Drama Inspiratif </button> <button id="genre-adventure" class="genre-btn px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 bg-gray-800 text-amber-400 border border-amber-500/30 hover:border-amber-500 hover:bg-gray-700" onclick="filterByGenre('adventure')"> 🗺️ Petualangan </button> <button id="genre-mystery" class="genre-btn px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 bg-gray-800 text-amber-400 border border-amber-500/30 hover:border-amber-500 hover:bg-gray-700" onclick="filterByGenre('mystery')"> 🔍 Misteri Thriller </button> <button id="genre-animals" class="genre-btn px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 bg-gray-800 text-amber-400 border border-amber-500/30 hover:border-amber-500 hover:bg-gray-700" onclick="filterByGenre('animals')"> 🐫 Kisah Hewan dalam Al-Quran </button>
+       <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8"><button id="genre-all" class="genre-btn active px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 bg-gradient-to-r from-amber-500 to-amber-600 text-black shadow-lg hover:shadow-xl" onclick="filterByGenre('all')"> 🎬 Semua Film </button> <button id="genre-prophets" class="genre-btn px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 bg-gray-800 text-amber-400 border border-amber-500/30 hover:border-amber-500 hover:bg-gray-700" onclick="filterByGenre('prophets')"> 👨‍🎓 Kisah Nabi &amp; Rosul </button> <button id="genre-companions" class="genre-btn px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 bg-gray-800 text-amber-400 border border-amber-500/30 hover:border-amber-500 hover:bg-gray-700" onclick="filterByGenre('companions')"> 🤝 Kisah Sahabat Nabi </button> <button id="genre-animals-quran" class="genre-btn px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 bg-gray-800 text-amber-400 border border-amber-500/30 hover:border-amber-500 hover:bg-gray-700" onclick="filterByGenre('animals-quran')"> 🐫 Hewan dalam Al-Quran </button> <button id="genre-islamic" class="genre-btn px-4 sm:px-6 py-2 sm:py-3 rounded-lg font-medium text-sm sm:text-base transition-all duration-300 bg-gray-800 text-amber-400 border border-amber-500/30 hover:border-amber-500 hover:bg-gray-700" onclick="filterByGenre('islamic')"> ✨ Kisah Islami </button>
        </div><!-- Search Box -->
        <div class="max-w-2xl mx-auto">
         <div class="relative">
@@ -778,8 +778,8 @@
       <div class="animate-fade-in-up animate-delay-4">
        <div class="text-center bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-amber-500/20 rounded-lg p-6 sm:p-8">
         <h3 class="text-amber-400 font-semibold text-lg sm:text-xl mb-3">Hubungi Kami</h3>
-        <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-4">Untuk pertanyaan, masukan, atau keluhan, silakan hubungi kami melalui:</p>
-        <p class="text-amber-500/80 font-medium text-sm sm:text-base">📧 Email: info@filmgmd.com</p>
+		<p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-4">Untuk pertanyaan, masukan, atau keluhan, silakan hubungi kami melalui:</p>
+		<p class="text-amber-500/80 font-medium text-sm sm:text-base">📧 Email:<a href="mailto:daarunnajahkumpulrejo@gmail.com" class="hover:text-amber-400 underline">daarunnajahkumpulrejo@gmail.com </a>atau<a href="mailto:ain0entawun@gmail.com" class="hover:text-amber-400 underline">ain0entawun@gmail.com</a></p>
        </div>
       </div>
      </div>
@@ -824,9 +824,44 @@
 
     // Film data organized by genre
     const filmsData = {
-      drama: {
-        name: 'Drama Inspiratif',
-        icon: '🎭',
+      prophets: {
+        name: 'Kumpulan Kisah Nabi & Rosul',
+        icon: '👨‍🎓',
+        films: [
+          // Silakan tambahkan film-film kisah nabi & rosul di sini
+        ]
+      },
+      companions: {
+        name: 'Kumpulan Kisah Sahabat Nabi',
+        icon: '🤝',
+        films: [
+          // Silakan tambahkan film-film kisah sahabat nabi di sini
+        ]
+      },
+      'animals-quran': {
+        name: 'Kumpulan Kisah Hewan dalam Al-Quran',
+        icon: '🐫',
+        films: [
+		  {
+			id: 101,
+			title: 'BURUNG GAGAK PART 1',
+			poster: 'https://i.imgur.com/SfGAVQG.png',
+			videoUrl: 'https://drive.google.com/file/d/1UwFipO2Fwx18n3gdYRjN5z3eK_lkvEeE/preview',
+			rating: 4.8
+		  },
+		  {
+			id: 102,
+			title: 'BURUNG GAGAK PART 2',
+			poster: 'https://i.imgur.com/SfGAVQG.png',
+			videoUrl: 'https://drive.google.com/file/d/1dCDPQcWaeCYa18OULQ-0MDkhphnAzb2d/preview',
+			rating: 4.7
+          }
+        ]
+      }
+    };	  
+      islamic: {
+        name: 'Kisah Islami',
+        icon: '✨',
         films: [
           {
             id: 1,
@@ -834,13 +869,7 @@
             poster: 'https://i.imgur.com/HSv8oFB.png',
             videoUrl: 'https://drive.google.com/file/d/1SoZVDWuRiR7QnaT0V5B_oFzpvYLm1jTg/preview',
             rating: 4.8
-          }
-        ]
-      },
-      adventure: {
-        name: 'Petualangan',
-        icon: '🗺️',
-        films: [
+          },
           {
             id: 2,
             title: 'THE JOURNEY',
@@ -848,33 +877,6 @@
             videoUrl: 'https://drive.google.com/file/d/12xlIYlVzUXeydvuHeVPVxDJl-M6JOSKg/preview',
             rating: 4.6
           }
-        ]
-      },
-      mystery: {
-        name: 'Misteri Thriller',
-        icon: '🔍',
-        films: [
-          {
-            id: 3,
-            title: 'BURUNG GAGAK PART 1',
-            poster: 'https://i.imgur.com/SfGAVQG.png',
-            videoUrl: 'https://drive.google.com/file/d/1UwFipO2Fwx18n3gdYRjN5z3eK_lkvEeE/preview',
-            rating: 4.7
-          },
-          {
-            id: 4,
-            title: 'BURUNG GAGAK PART 2',
-            poster: 'https://i.imgur.com/SfGAVQG.png',
-            videoUrl: 'https://drive.google.com/file/d/1dCDPQcWaeCYa18OULQ-0MDkhphnAzb2d/preview',
-            rating: 4.6
-          }
-        ]
-      },
-      animals: {
-        name: 'Kisah Hewan dalam Al-Quran',
-        icon: '🐫',
-        films: [
-          // Silakan tambahkan film-film kisah hewan di sini
         ]
       }
     };
@@ -1163,5 +1165,5 @@
     // Initialize gallery on page load
     displayFilms('all');
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cd817de31f940c0',t:'MTc3MTAyNTIxMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cd86670c6765f35',t:'MTc3MTAyODQzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
