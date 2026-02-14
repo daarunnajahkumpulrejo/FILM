@@ -778,8 +778,8 @@
       <div class="animate-fade-in-up animate-delay-4">
        <div class="text-center bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-amber-500/20 rounded-lg p-6 sm:p-8">
         <h3 class="text-amber-400 font-semibold text-lg sm:text-xl mb-3">Hubungi Kami</h3>
-		<p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-4">Untuk pertanyaan, masukan, atau keluhan, silakan hubungi kami melalui:</p>
-		<p class="text-amber-500/80 font-medium text-sm sm:text-base">📧 Email:<a href="mailto:daarunnajahkumpulrejo@gmail.com" class="hover:text-amber-400 underline">daarunnajahkumpulrejo@gmail.com </a>atau<a href="mailto:ain0entawun@gmail.com" class="hover:text-amber-400 underline">ain0entawun@gmail.com</a></p>
+        <p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-4">Untuk pertanyaan, masukan, atau keluhan, silakan hubungi kami melalui:</p>
+        <p class="text-amber-500/80 font-medium text-sm sm:text-base">📧 Email: "mailto:daarunnajahkumpulrejo@gmail.com"</p>
        </div>
       </div>
      </div>
@@ -828,14 +828,15 @@
         name: 'Kumpulan Kisah Nabi & Rosul',
         icon: '👨‍🎓',
         films: [
-          // Silakan tambahkan film-film kisah nabi & rosul di sini
+          // Tambahkan film-film kisah nabi & rosul di sini
+          // Format: { id: 3, title: 'NAMA FILM', poster: 'https://link-gambar', videoUrl: 'https://drive.google.com/file/d/ID/preview', rating: 4.8 }
         ]
       },
       companions: {
         name: 'Kumpulan Kisah Sahabat Nabi',
         icon: '🤝',
         films: [
-          // Silakan tambahkan film-film kisah sahabat nabi di sini
+          // Tambahkan film-film kisah sahabat nabi di sini
         ]
       },
       'animals-quran': {
@@ -843,14 +844,14 @@
         icon: '🐫',
         films: [
 		  {
-			id: 101,
+			id: 5,
 			title: 'BURUNG GAGAK PART 1',
 			poster: 'https://i.imgur.com/SfGAVQG.png',
 			videoUrl: 'https://drive.google.com/file/d/1UwFipO2Fwx18n3gdYRjN5z3eK_lkvEeE/preview',
 			rating: 4.8
 		  },
 		  {
-			id: 102,
+			id: 6,
 			title: 'BURUNG GAGAK PART 2',
 			poster: 'https://i.imgur.com/SfGAVQG.png',
 			videoUrl: 'https://drive.google.com/file/d/1dCDPQcWaeCYa18OULQ-0MDkhphnAzb2d/preview',
@@ -858,7 +859,7 @@
           }
         ]
       }
-    };	  
+    };
       islamic: {
         name: 'Kisah Islami',
         icon: '✨',
@@ -903,7 +904,9 @@
       document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.remove('active');
       });
-      event.target.classList.add('active');
+      if (event && event.target) {
+        event.target.classList.add('active');
+      }
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -1165,5 +1168,5 @@
     // Initialize gallery on page load
     displayFilms('all');
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cd86670c6765f35',t:'MTc3MTAyODQzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9cd897c4955cb00b',t:'MTc3MTAzMDQ1Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
